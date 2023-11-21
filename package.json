@@ -1,0 +1,15 @@
+{
+  "name": "curso-api-rest-js-practico",
+  "version": "1.0.0",
+  "description": "Curso de Consumo de API REST con JS Práctico. Proyecto de APP de Movies/Series",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/nmarlene/curso-api-rest-js-practico)"
+  },
+  "author": "@nmarlene",
+  "license": "MIT"
+}
