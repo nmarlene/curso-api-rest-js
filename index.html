@@ -1,14 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700;800&family=Red+Hat+Display:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style/app.css" />
+
   <title>CanteraMovies</title>
-  <link rel="stylesheet" href="/style/app.css">
 </head>
 <body>
-  <h1>CanteraMovies</h1>
+  <header id="header" class="header-container">
+    <span class="header-arrow inactive">&lt;</span>
+    <h1 class="header-title">CanteraMovies 😸</h1>
+    <h1 class="header-title header-title--categoryView inactive"></h1>
+<select id="languages"  class="header-languages">
+  <option id="firstValue" >🌐</option>
+  <option id="optionEspañol" value="es-ES">Español</option>
+  <option id="optionEnglish" value="en-EN">English</option>
+</select>
+    <form id="searchForm" class="header-searchForm">
+      <input type="text" placeholder="¿Qué querés ver hoy?" />
+      <button id="searchBtn">🔍</button>
+    </form>
+
+  </header>
+
+  <section id="trendingPreview" class="trendingPreview-container">
+    <div class="trendingPreview-header">
+      <h2 class="trendingPreview-title">Tendencias</h2>
+      <button class="trendingPreview-btn">Ver más</button>
+    </div>
+
+    <article class="trendingPreview-movieList">
+       <div class="movie-container movie-container--loading"></div>
+      <div class="movie-container movie-container--loading"></div>
+      <div class="movie-container movie-container--loading">
+      <!-- <div class="movie-container">
+        <img
+          src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
+          class="movie-img"
+          alt="Nombre de la película"
+        />
+      </div> -->
+    </article>
+  </section>
+
+  <section id="categoriesPreview" class="categoriesPreview-container">
+    <h2 class="categoriesPreview-title">Categorías</h2>
+
+    <article class="categoriesPreview-list">
+      <div class="category-container category-container--loading"></div>
+      <div class="category-container category-container--loading"></div>
+         <div class="category-container category-container--loading"></div>
+      <!-- <div class="category-container">
+        <h3 id="id14" class="category-title">Acción</h3>
+      </div> -->
+    </article>
+  </section>
+  <section id="liked" class="liked-container">
+    <div class="liked-header">
+      <h2 class="liked-title">Peliculas favoritas</h2>
+    </div>
+<article class="liked-movieList">
+  <div class="movie-container">
+        <img
+          src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
+          class="movie-img"
+          alt="Nombre de la película"
+        />
+        
+      </div> 
+       <div class="movie-container">
+        <img
+          src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
+          class="movie-img"
+          alt="Nombre de la película"
+        />
+        
+      </div>
+
+</article>
+  </section>
+
+  <section id="genericList" class="genericList-container inactive">
+     <div class="movie-container movie-container--loading"></div>
+    <div class="movie-container movie-container--loading"></div>
+     <div class="movie-container movie-container--loading">
+    <!-- <div class="movie-container">
+      <img
+        src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
+        class="movie-img"
+        alt="Nombre de la película"
+      />
+    </div>-->
+     </div>
+  </section>
+
+  <section id="movieDetail" class="movieDetail-container inactive">
+    <h1 class="movieDetail-title"></h1>
+    <span class="movieDetail-score"></span>
+    <p class="movieDetail-description">
+     
+    </p>
+
+    <article class="categories-list">
+       <div class="category-container category-container--loading"></div>
+      <div class="category-container category-container--loading"></div>
+      <div class="category-container category-container--loading"> </div>
+  <!--     <div class="category-container">
+        <h3 id="id28" class="category-title">Romance</h3>
+      </div> -->
+
+    </article>
+
+    <article class="relatedMovies-container">
+      <h2 class="relatedMovies-title">Películas similares</h2>
+
+      <div class="relatedMovies-scrollContainer">
+          <div class="movie-container movie-container--loading"></div>
+        <div class="movie-container movie-container--loading"></div>
+         <div class="movie-container movie-container--loading">
+       <!--  <div class="movie-container">
+          <img
+            src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
+            class="movie-img"
+            alt="Nombre de la película"
+          />
+        </div> -->
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <footer>Hecho con amor en Platzi por @marlene</footer>
+  <!-- Axios -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="/js/api-key.js"></script>
+   <script src="/js/nodes.js"></script>
   <script src="/js/main.js"></script>
+  <script src="/js/navigation.js"></script>
 </body>
 </html>
